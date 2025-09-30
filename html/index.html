@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automa</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+     <div id="loading-screen">
+        <h1>AUTOMA</h1>
+        <div class="loading-spinner"></div>
+        <div>Loading Automa</div>
+    </div>
+
+    <div id="info-modal">
+        <h2>Welcome to Automa</h2>
+        <p>Here's how to use this unique interactive experience</p>
+        <ul>
+            <li>Hover on the pulsing dots to explore different sections</li>
+            <li>Click on the dots to navigate to each section</li>
+            <li>The robot in the center is interactive</li>
+            <li>Click on the grey pulsing dot to switch to normal experience</li>
+            <li> important!!! if on phone/tablette switch experience by clicking on the grey dot below</li>
+        </ul>
+        <button id="modal-close">understood</button>
+    </div>
+    
+    <h1 class="logo">AUTOMA</h1>
+    <div class="container">
+         <div class="pulsing-dots-container">
+            <div onclick="window.location.href='auth.html';" class="pulsing-dot dot-1" data-label="Get startred"></div>
+            <div onclick="window.location.href='Service.html';" class="pulsing-dot dot-2" data-label="Services"></div>
+            <div onclick="window.location.href='About.html';" class="pulsing-dot dot-3" data-label="About us"></div>
+            <div onclick="window.location.href='contact.html';" class="pulsing-dot dot-4" data-label="Reach us"></div>
+            <div onclick="window.location.href='purchase.html';" class="pulsing-dot dot-5" data-label="purchase"></div>
+            <div onclick="window.location.href='policies.html';" class="pulsing-dot dot-6" data-label="Policies"></div>
+            <div onclick="window.location.href='SEHome.html';"  id="dot7" class="pulsing-dot dot-7" data-label="Switch exp"></div>
+        </div>
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.35/build/spline-viewer.js"></script>
+        <spline-viewer class="robot" url="https://prod.spline.design/CkCaAaiXXPzFFie0/scene.splinecode"></spline-viewer>
+    </div>
+    <script src="/js/loading.js"></script>
+    
+    
+    
+</body>
+</html>

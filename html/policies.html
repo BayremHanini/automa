@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayutoma – Policies</title>
+  <link rel="stylesheet" href="/css/About.css" />
+  <style>
+    section.policy-section {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(128, 128, 128, 0.1);
+    }
+
+    section.policy-section h2 {
+      font-size: 2rem;
+      margin-top: 2rem;
+      color: #333;
+    }
+
+    section.policy-section p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #444;
+      margin-top: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: gray;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="loading-screen">
+    <div class="loading-spinner"></div>
+    <h1>Ayutoma</h1>
+  </div>
+
+  <header>
+    <h1>Ayutoma</h1>
+    <nav>
+      <a href="/html/Home.html">Home</a>
+      <a href="/html/About.html">About</a>
+      <a href="/policies.html">Policies</a>
+      <a href="/html/contact.html">Reach us</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <div class="tagbox"><div class="tag">Our Policies</div></div>
+
+    <section class="policy-section">
+      <h2>1. Privacy Policy</h2>
+      <p>We collect only the necessary information to provide you with the best service experience. This includes your name, email, and service preferences. Your data is never sold and is only shared with third parties when legally required.</p>
+
+      <h2>2. Terms of Use</h2>
+      <p>By using our site, you agree to use Ayutoma responsibly and not to misuse our services. All site content is the intellectual property of Ayutoma and may not be reused without permission.</p>
+
+      <h2>3. Refund & Cancellation Policy</h2>
+      <p>Bookings can be cancelled up to 24 hours in advance for a full refund. Digital content is non-refundable once accessed or downloaded. For concerns, contact us within 7 days at support@ayutoma.com.</p>
+
+      <h2>4. Cookies Policy</h2>
+      <p>We use cookies to enhance your user experience. You may disable cookies in your browser settings, but this may affect functionality.</p>
+
+      <h2>5. Contact</h2>
+      <p>For questions or concerns, contact us at: <br><strong>Email:</strong> support@ayutoma.com</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Ayutoma. All rights reserved.
+  </footer>
+
+  <script>
+    window.addEventListener("load", () => {
+      const loadingScreen = document.getElementById("loading-screen");
+      loadingScreen.style.opacity = "0";
+      setTimeout(() => loadingScreen.style.display = "none", 500);
+    });
+  </script>
+
+</body>
+</html>

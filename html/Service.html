@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automa|Services</title>
+    <link rel="stylesheet" href="/css/Service.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="loading-screen">
+        <h1>Services</h1>
+        <div class="loading-spinner"></div>    
+    </div>
+    <header>
+        <h1 class="logo">AUTOMA</h1>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="SEHome.html">Alternative home</a>
+            <a href="purchase.html">Purchase</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Reach US</a>
+        </nav>            
+    </header>
+    <div class="content">
+        <div class="tagbox">
+            <div class="tag">Services &wedbar;</div>
+        </div>
+        <h1>Introducing automa services</h1>
+        <h4>Automa is an automation website built to offer you solutions to your boring and heavy daily tasks.</h4>
+        <h4>Open the card to see Automa services and click the white dot to learn more</h4>
+        <div class="options" style="position: absolute; left: 20%; bottom: 1%;">
+            <div class="option active" style="--optionBackground:url(/image/vecteezy_ai-generated-modern-futuristic-robot-with-glowing-eyes-ai_35645924.jpg);">
+                <div class="shadow"></div>
+                <div class="label">
+                    <div class="icon" onclick="scrollToService('bms')">                    </div>
+                    <div class="info">
+                        <div class="main">BMS</div>
+                        <div class="sub">BULK MAIL SENDER</div>
+                    </div>
+                </div>
+            </div>
+            <div class="option" style="--optionBackground:url(/image/vecteezy_humanoid-robot-or-cyborg-with-orange-and-black-background_27058363.jpg);">
+                <div class="shadow"></div>
+                <div class="label">
+                    <div class="icon" onclick="scrollToService('bwms')">                    </div>
+                    <div class="info">
+                        <div class="main">BWMS</div>
+                        <div class="sub">BULK WHATSAPP MESSAGE SENDER</div>
+                    </div>
+                </div>
+            </div>
+            <div class="option" style="--optionBackground:url(/image/vecteezy_artificial-robot-hand-pointing-finger-in-the-style-of-human_46632916.jpg);">
+                <div class="shadow"></div>
+                <div class="label">
+                    <div class="icon" onclick="scrollToService('bmms')">                    </div>
+                    <div class="info">
+                        <div class="main">BMMS</div>
+                        <div class="sub">BULK MESSENGER MESSAGES SENDER</div>
+                    </div>
+                </div>
+            </div>
+            <div class="option" style="--optionBackground:url(/image/vecteezy_robot-electronic-access-authentication-system-tec_30644548.jpg);">
+                <div class="shadow"></div>
+                <div class="label">
+                    <div class="icon" onclick="scrollToService('bims')">                    </div>
+                    <div class="info">
+                        <div class="main">BIMS</div>
+                        <div class="sub">BULK INSTAGRAM MESSAGES</div>
+                    </div>
+                </div>
+            </div>
+            <div class="option" style="--optionBackground:url(/image/robot-hand-showing-background-3d-ai-technology-side-view.jpg);">
+                <div class="shadow"></div>
+                <div class="label">
+                    <div class="icon" onclick="scrollToService('ai')">
+                    </div>
+                    <div class="info">
+                        <div class="main">AI AUTOMATION</div>
+                        <div class="sub">Coming soon</div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </div>
+
+    <div class="service-section" id="bms">
+        <div class="service-content">
+            <h2>Bulk Mail Sender (BMS)</h2>
+            <p>Our Bulk Mail Sender automates your email campaigns, allowing you to send personalized emails to thousands of recipients with just a few clicks. Features include:</p>
+            <ul>
+                <li>Customizable email templates</li>
+                <li>Personalization tags for each recipient</li>
+                <li>Detailed logs and reporting</li>
+                <li>Integration with popular CRM systems</li>
+            </ul>
+            <p>Perfect for marketing teams, small businesses, and anyone who needs to communicate efficiently with large groups.</p>
+            <button class="pricing" onclick="window.location.href='bms.html';">Discover plans</button>
+            <button class="back-to-top" onclick="scrollToTop()">Back to Services</button>
+        </div>
+    </div>
+
+    <div class="service-section" id="bwms">
+        <div class="service-content">
+            <h2>Bulk WhatsApp Message Sender (BWMS)</h2>
+            <p>Automate your WhatsApp communication with our powerful bulk messaging tool. Send personalized messages to your contacts without manual effort.</p>
+            <ul>
+                <li>Send messages to multiple WhatsApp contacts simultaneously</li>
+                <li>Personalized message templates</li>
+                <li>Scheduled messaging</li>
+                <li>Read receipt tracking</li>
+                <li>Compliant with WhatsApp's terms of service</li>
+            </ul>
+            <p>Ideal for customer support, appointment reminders, and marketing campaigns.</p>
+            <button class="pricing" onclick="window.location.href='comingsoon.html';">Discover plans</button>
+            <button class="back-to-top" onclick="scrollToTop()">Back to Services</button>        </div>
+    </div>
+
+    <div class="service-section" id="bmms">
+        <div class="service-content">
+            <h2>Bulk Messenger Messages Sender (BMMS)</h2>
+            <p>Streamline your Facebook Messenger communication with our bulk messaging solution for businesses and content creators.</p>
+            <ul>
+                <li>Send messages to multiple Facebook contacts at once</li>
+                <li>Automated responses and follow-ups</li>
+                <li>Message templates for common inquiries</li>
+                <li>Integration with Facebook Pages</li>
+                <li>Analytics dashboard for message performance</li>
+            </ul>
+            <p>Great for e-commerce stores, influencers, and community managers.</p>
+            <button class="pricing" onclick="window.location.href='comingsoon.html';">Discover plans</button>
+            <button class="back-to-top" onclick="scrollToTop()">Back to Services</button>        </div>
+    </div>
+
+    <div class="service-section" id="bims">
+        <div class="service-content">
+            <h2>Bulk Instagram Messages (BIMS)</h2>
+            <p>Manage your Instagram direct messages efficiently with our bulk messaging tool designed for Instagram's platform.</p>
+            <ul>
+                <li>Send bulk DMs to followers or specific lists</li>
+                <li>Auto-reply to common messages</li>
+                <li>Schedule messages for optimal engagement times</li> 
+                <li>Track message opens and responses</li>
+                <li>Safe automation that complies with Instagram's policies</li>
+            </ul>
+            <p>Perfect for brands, influencers, and small businesses growing their Instagram presence.</p>
+            <button class="pricing" onclick="window.location.href='comingsoon.html';">Discover plans</button>
+            <button class="back-to-top" onclick="scrollToTop()">Back to Services</button>        </div>
+    </div>
+
+    <div class="service-section" id="ai">
+        <div class="service-content">
+            <h2>AI Automation (Coming Soon)</h2>
+            <p>Our upcoming AI Automation suite will revolutionize how you handle repetitive tasks across all platforms.</p>
+            <ul>
+                <li>AI-powered smart responses</li>
+                <li>Cross-platform automation</li>
+                <li>Natural language processing for customer inquiries</li>
+                <li>Machine learning to optimize your workflows</li>
+                <li>Custom automation scripts</li>
+            </ul>
+            <p>Sign up to be notified when this powerful tool launches!</p>
+            <button class="pricing" onclick="window.location.href='comingsoon.html';">Discover plans</button>
+            <button class="back-to-top" onclick="scrollToTop()">Back to Services</button>        </div>
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="/js/loading.js"></script>
+    <script src="/js/cards.js"></script>
+    <script>
+
+        function scrollToService(serviceId) {
+            document.getElementById(serviceId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+  
+    </script>
+    
+</body>
+</html>

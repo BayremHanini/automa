@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Automa | Purchase</title>
+    <link rel="stylesheet" href="/css/purchase.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+</head>
+<body>
+    <div id="loading-screen">
+        <h1>Request service</h1>
+        <div class="loading-spinner"></div>
+        <div>Loading Automa</div>
+    </div>
+    <header>
+        <h1 class="logo">AUTOMA</h1>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="SEHome.html">Alternative home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Reach US</a>
+        </nav>            
+    </header>
+    <br /><br /><br />
+    <div class="content">
+        <div class="tagbox">
+            <div class="tag">Purchase &wedbar;</div>
+        </div>
+        <h1>Congrats<br /> you're here</h1>
+        <p class="description">
+            The reason you are here is only because automa got you attention.
+        </p>
+        <p class="description">
+            Thank you for trusting us and choosing our services.
+        </p>
+        <div class="buttons">
+            <a onclick="scrollToService('purchase')" class="getstartedbtn"
+                >Purchase now</a
+            >
+            <a href="contact.html" class="signinmainbtn">reach us </a>
+        </div>
+    </div>
+    <br /><br /><br />
+    <div class="purchase-container" id="purchase">
+        <br /><br />
+        <div class="purchase-header">
+            <h1>Request Service</h1>
+            <p>
+                Fill out this form and our team will contact you within less than 24 hours to
+                complete your purchase
+            </p>
+        </div>
+
+        <form class="purchase-form" id="requestForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+                <label for="service">Select Service</label>
+                <select id="service" class="form-control" required>
+                    <option value="" disabled selected>Choose a service</option>
+                    <option value="bms">Bulk Mail Sender (BMS)</option>
+                    <option value="bwms">Bulk WhatsApp Message Sender (BWMS)</option>
+                    <option value="bmms">Bulk Messenger Messages Sender (BMMS)</option>
+                    <option value="bims">Bulk Instagram Messages (BIMS)</option>
+                    <option value="ai">AI Automation</option>
+                </select>
+            </div>
+
+            <div id="bms-plans" class="plan-options">
+                <h3>BMS Plans</h3>
+                <div class="plan-option" data-plan="basic">
+                    <div class="plan-name">Basic Application</div>
+                    <div class="plan-price">Send up to 500 emails in one click </div>
+                    <ul class="plan-features">
+                        <li>Load client files (names/emails)</li>
+                        <li>Simple interface</li>
+                        <li>No landing page included</li>
+                    </ul>
+                </div>
+                <div class="plan-option" data-plan="combo">
+                    <div class="plan-name">BMS + Basic Landing</div>
+                    <div class="plan-price">Send up to 500 emails in one click</div>
+                    <ul class="plan-features">
+                        <li>Includes pre-made landing page</li>
+                        <li>Basic non-customizable design</li>
+                    </ul>
+                </div>
+                <div class="plan-option" data-plan="custom">
+                    <div class="plan-name">BMS + Custom Landing</div>
+                    <div class="plan-price">Send up to 500 emails in one click</div>
+                    <ul class="plan-features">
+                        <li>Customizable landing page</li>
+                        <li>Brand matching options</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="bwms-plans" class="plan-options">
+                <h3>BWMS Plans</h3>
+                <div class="plan-option" data-plan="basic">
+                    <div class="plan-name">Basic Plan</div>
+                    <div class="plan-price">Send to 100 contacts/day</div>
+                    <ul class="plan-features">
+                        <li>Personalized message templates</li>
+                        <li>Scheduled messaging</li>
+                    </ul>
+                </div>
+                <div class="plan-option" data-plan="pro">
+                    <div class="plan-name">Pro Plan</div>
+                    <div class="plan-price">Send to 500 contacts/day</div>
+                    <ul class="plan-features">
+                        <li>Advanced analytics</li>
+                        <li>Read receipt tracking</li>
+                    </ul>
+                </div>
+            </div>
+             <div id="bmms-plans" class="plan-options">
+                <h3>Coming soon</h3>
+            </div>
+             <div id="bims-plans" class="plan-options">
+                <h3>Coming soon</h3>
+            </div>
+             <div id="ai-plans" class="plan-options">
+                <h3>Coming soon</h3>
+            </div>
+
+            <button type="submit" class="submit-btn">Request Service</button>
+        </form>
+
+        <div class="confirmation-message" id="confirmationMessage" style="display:none;">
+            <h2>Request Received!</h2>
+            <p>
+                Thank you for your interest in Automa. Our team will contact you within
+                24 hours to discuss your service request and payment options.
+            </p>
+            <a style="text-decoration: none;" href="index.html" class="submit-btn">Return to Home</a>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.38/build/spline-viewer.js"></script>
+    <spline-viewer
+      class="creditcard"
+      url="https://prod.spline.design/qhXSYWCKa-QiVhSK/scene.splinecode"
+    ></spline-viewer>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+      import {
+        getFirestore,
+        collection,
+        addDoc,
+      } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyDRWVCZvvhwWQ6-GFIg2itOU2ZxrEEm1Bc",
+        authDomain: "automa-e7a55.firebaseapp.com",
+        projectId: "automa-e7a55",
+        storageBucket: "automa-e7a55.appspot.com",
+        messagingSenderId: "881549519390",
+        appId: "1:881549519390:web:1c6ffa6a98c2c80bef5c0f",
+        measurementId: "G-Z0F304T0RS",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const serviceSelect = document.getElementById("service");
+        const planOptions = document.querySelectorAll(".plan-option");
+        const form = document.getElementById("requestForm");
+        const confirmationMessage = document.getElementById("confirmationMessage");
+
+        serviceSelect.addEventListener("change", function () {
+          document.querySelectorAll(".plan-options").forEach((option) => {
+            option.classList.remove("active");
+          });
+          if (this.value) {
+            document
+              .getElementById(`${this.value}-plans`)
+              .classList.add("active");
+          }
+        });
+
+        planOptions.forEach((option) => {
+          option.addEventListener("click", function () {
+            planOptions.forEach((opt) => opt.classList.remove("selected"));
+            this.classList.add("selected");
+          });
+        });
+
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          if (!serviceSelect.value) {
+            alert("Please select a service");
+            return;
+          }
+
+          const selectedPlan = document.querySelector(".plan-option.selected");
+          if (!selectedPlan) {
+            alert("Please select a plan");
+            return;
+          }
+
+          const formData = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            phone: document.getElementById("phone").value,
+            serviceType: `${serviceSelect.value} (${selectedPlan.dataset.plan})`,
+            message: `Plan: ${selectedPlan.querySelector(".plan-name").textContent}`,
+            submittedAt: new Date(),
+          };
+
+          try {
+            await addDoc(collection(db, "requests"), formData);
+            form.style.display = "none";
+            confirmationMessage.style.display = "block";
+          } catch (err) {
+            console.error("Error:", err);
+            alert("Submission failed. Please try again.");
+          }
+        });
+      });
+
+      function scrollToService(serviceId) {
+        document.getElementById(serviceId).scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+    </script>
+
+    <script src="/js/loading.js"></script>
+</body>
+</html>

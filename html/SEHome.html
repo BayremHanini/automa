@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automa</title>
+    <link rel="stylesheet" href="/css/SEstyles.css">
+</head>
+<body>
+      <div id="loading-screen">
+        <h1>SWITCHING EXPERIENCE</h1>
+        <div class="loading-spinner"></div>
+        <div>Loading new exp</div>
+    </div>
+        <main>
+            <header>
+                    <h1 class="logo">AUTOMA</h1>
+                    <div class="hamburger" id="hamburger">&#9776;</div>
+
+                    <nav id="nav-links">
+                        <a href="index.html">Switch exp</a>
+                        <a href="Service.html">Services</a>
+                        <a href="purchase.html">Purchase</a>
+                        <a href="about.html">About Us</a>
+                        <a href="contact.html">Reach US</a>
+                    </nav>            
+            </header>
+            <br>
+            <br>
+            <br>
+            <div class="content">
+                <div class="tagbox">
+                    <div class="tag">WELCOME TO AUTOMA &wedbar;</div>
+                </div>
+                <h1>AUTOMATE<br>YOUR TASKS</h1>
+                <P class="description">Access our automation services throught this website.</P>
+                <p class="description">Join us now to get your boring tasks made for you in no time.</p>
+                <div class="buttons">
+                    <a href="auth.html" class="getstartedbtn">Get Started</a>
+                    <a href="About.html" class="signinmainbtn">Learn More</a>  
+                </div>
+            </div>
+        </main>
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.37/build/spline-viewer.js"></script>
+        <spline-viewer class="robot" url="https://prod.spline.design/CkCaAaiXXPzFFie0/scene.splinecode"></spline-viewer>
+        <script src="/js/loading.js"></script>
+        <script>
+    const hamburger = document.getElementById("hamburger");
+    const nav = document.getElementById("nav-links");
+
+    hamburger.addEventListener("click", () => {
+        nav.classList.toggle("active");
+    });
+</script>
+
+</body>
+</html>

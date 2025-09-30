@@ -1,0 +1,1168 @@
+@font-face {
+  font-family: "deltha";
+  src: url("/fonts/deltha/Deltha.otf") format("woff2"),
+       url("/fonts/deltha/Deltha.otf") format("woff");
+}
+body{
+    font-family: 'deltha';
+    background-color: #e3e2e2;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e3e2e2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000000;
+  border-radius: 0px;
+}
+ #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #e3e2e2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        #loading-screen h1{
+            font-size: 60px;
+        }
+
+        .loading-spinner {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #000000;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+    z-index:999 ;
+
+}
+header h1{
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 300;
+    
+}
+nav{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-left:-5 ;
+}
+nav a{
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    transition: color 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+}
+nav a:hover{
+    color: rgb(95, 95, 95);
+}
+.content{
+     max-width: 40rem;
+     margin-left: 5%;
+     z-index: 999;
+}
+.tagbox{
+    position: relative;
+    width: 18rem;
+    height: 2.5rem;
+    border-radius: 50px;
+    background: linear-gradient(to right,#656565, #888888,#b8b8b8, #525252,#757575,#656565);
+    background-size: 200%;
+    animation: animationGradient 2.5s linear;
+    box-shadow: 0 0 15px rgb(255, 255, 255,0.3);
+
+}
+@keyframes animationGradient{
+    to{
+        background-position: 200%;
+    }
+}
+.tagbox .tag{
+    position: absolute;
+    inset: 3px 3px 3px 3px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.tagbox .tag:hover{
+    color: #000000;
+}
+.content h1{
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin: 2rem 0;
+    line-height: 1.2;
+    text-shadow: 0 0 10px rgba(128, 128, 128, 0.418);
+
+}
+.description{
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    max-width: 35rem;
+    color: grey;
+}
+.buttons{
+    display: flex;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+.getstartedbtn{
+    text-decoration: none;
+    border: 2px solid #2a2a2a;
+    color: #000000;
+    padding: 0.7rem 1.2rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    transition:  background-color 0.2s ease;
+}
+.getstartedbtn:hover{
+    background-color: #000000;
+    color: white;
+}
+.signinmainbtn{
+    text-decoration: none;
+    background-color: rgb(137, 137, 137);
+    color: black;
+    border: 2px solid #2a2a2a;
+    padding: 0.7rem 1.2rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    transition:  background-color 0.2s ease;
+}
+.signinmainbtn:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+.creditcard{
+    position: absolute;
+    top: 0%;
+    left: 23%;
+    transform: scale(1);
+    cursor: pointer;
+    z-index: -1;
+}
+ .purchase-container {
+            max-width: 800px;
+            margin: 5rem auto;
+            padding: 0 2rem;
+        }
+
+        .purchase-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .purchase-header h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+
+        .purchase-header p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .purchase-form {
+            background: white;
+            border-radius: 10px;
+            padding: 3rem;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-family: 'deltha';
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #000;
+            box-shadow: 0 0 0 3px rgba(0,0,0,0.05);
+        }
+
+        select.form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1em;
+        }
+
+        .plan-options {
+            display: none;
+            margin-top: 1.5rem;
+            padding: 1.5rem;
+            background: rgba(0,0,0,0.03);
+            border-radius: 6px;
+        }
+
+        .plan-options.active {
+            display: block;
+        }
+
+        .plan-option {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .plan-option:hover {
+            border-color: #000;
+        }
+
+        .plan-option.selected {
+            border-color: #000;
+            background: rgba(0,0,0,0.03);
+        }
+
+        .plan-name {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .plan-price {
+            color: #555;
+        }
+
+        .plan-features {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        .plan-features li {
+            margin-bottom: 0.3rem;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.2rem;
+            background: #000;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-family: 'deltha';
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 2rem;
+        }
+
+        .submit-btn:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+
+        .confirmation-message {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+        }
+
+        .confirmation-message h2 {
+            font-size: 2rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+
+        .confirmation-message p {
+            color: #555;
+            margin-bottom: 2rem;
+        }
+
+.plan-option {
+    transition: all 0.3s ease;
+}
+
+.plan-option:hover {
+    background-color: #ffffff;
+    color: white;
+    border-color: #000;
+}
+
+.plan-option:hover .plan-name,
+.plan-option:hover .plan-price,
+.plan-option:hover .plan-features {
+    color: rgb(0, 0, 0);
+}
+
+.plan-option.selected {
+    background-color: #000;
+    color: white;
+    border-color: #000;
+}
+
+.plan-option.selected .plan-name,
+.plan-option.selected .plan-price,
+.plan-option.selected .plan-features,
+.plan-option.selected .plan-features li {
+    color: white;
+}
+
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem 2rem;
+                flex-direction: column;
+            }
+
+            nav {
+                margin-top: 1.5rem;
+            }
+
+            .purchase-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .purchase-form {
+                padding: 2rem;
+            }
+        }
+        .hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10000;
+    color: black;
+}
+@media (max-width:600px) {
+    body{
+    font-family: 'deltha';
+    background-color: #e3e2e2;
+    overflow-x: hidden;
+}
+ #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #e3e2e2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        #loading-screen h1{
+            font-size: 60px;
+        }
+
+        .loading-spinner {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #000000;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+header{
+    align-items: center;
+
+    z-index:999 ;
+
+}
+header h1{
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 300;
+    position: absolute;
+    left: 3%;
+    top: 3%;
+    
+}
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 3%;
+        top: 3%;
+
+    }
+
+    nav {
+        position: absolute;
+        top: 5rem;
+        right: 0;
+        background-color: #e3e2e2;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        padding: 1rem 2rem;
+        display: none;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        padding: 1rem 0;
+        font-size: 1.1rem;
+        width: 100%;
+    }
+
+.content {
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 999;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+}
+.tagbox{
+    position: relative;
+    width: 18rem;
+    height: 2.5rem;
+    border-radius: 50px;
+    background: linear-gradient(to right,#656565, #888888,#b8b8b8, #525252,#757575,#656565);
+    background-size: 200%;
+    animation: animationGradient 2.5s linear;
+    box-shadow: 0 0 15px rgb(255, 255, 255,0.3);
+    margin: 1rem auto;
+
+}
+@keyframes animationGradient{
+    to{
+        background-position: 200%;
+    }
+}
+.tagbox .tag{
+    position: absolute;
+    inset: 3px 3px 3px 3px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.tagbox .tag:hover{
+    color: #000000;
+}
+.content h1{
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin: 2rem 0;
+    line-height: 1.2;
+    text-shadow: 0 0 10px rgba(128, 128, 128, 0.418);
+
+}
+.description{
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    max-width: 35rem;
+    color: grey;
+}
+.buttons{
+    gap: 1.5rem;
+    position: relative;
+    bottom: 35px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.getstartedbtn{
+    text-decoration: none;
+    border: 2px solid #2a2a2a;
+    color: #000000;
+    padding: 0.7rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    transition:  background-color 0.2s ease;
+}
+.getstartedbtn:hover{
+    background-color: #000000;
+    color: white;
+}
+.signinmainbtn{
+    text-decoration: none;
+    background-color: rgb(137, 137, 137);
+    color: black;
+    border: 2px solid #2a2a2a;
+    padding: 0.7rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    transition:  background-color 0.2s ease;
+}
+.signinmainbtn:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+.creditcard{
+    position: absolute;
+    top: 60%;
+    left: 0%;
+    transform: scale(1);
+    cursor: pointer;
+    z-index: -1;
+}
+ .purchase-container {
+            max-width: 800px;
+            margin: 0rem auto;
+            padding: 0 0rem;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .purchase-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .purchase-header h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+
+        .purchase-header p {
+            font-size: 1.2rem;
+            color: #000000;
+        }
+
+        .purchase-form {
+            background: white;
+            border-radius: 10px;
+            padding: 3rem;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .form-control {
+            width: 94%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-family: 'deltha';
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #000;
+            box-shadow: 0 0 0 3px rgba(0,0,0,0.05);
+        }
+
+        select.form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1em;
+        }
+
+        .plan-options {
+            display: none;
+            margin-top: 1.5rem;
+            padding: 1.5rem;
+            background: rgba(0,0,0,0.03);
+            border-radius: 6px;
+        }
+
+        .plan-options.active {
+            display: block;
+        }
+
+        .plan-option {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .plan-option:hover {
+            border-color: #000;
+        }
+
+        .plan-option.selected {
+            border-color: #000;
+            background: rgba(0,0,0,0.03);
+        }
+
+        .plan-name {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .plan-price {
+            color: #555;
+        }
+
+        .plan-features {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        .plan-features li {
+            margin-bottom: 0.3rem;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.2rem;
+            background: #000;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-family: 'deltha';
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 2rem;
+        }
+
+        .submit-btn:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+
+        .confirmation-message {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+        }
+
+        .confirmation-message h2 {
+            font-size: 2rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+
+        .confirmation-message p {
+            color: #555;
+            margin-bottom: 2rem;
+        }
+
+.plan-option {
+    transition: all 0.3s ease;
+}
+
+.plan-option:hover {
+    background-color: #ffffff;
+    color: white;
+    border-color: #000;
+}
+
+.plan-option:hover .plan-name,
+.plan-option:hover .plan-price,
+.plan-option:hover .plan-features {
+    color: rgb(0, 0, 0);
+}
+
+.plan-option.selected {
+    background-color: #000;
+    color: white;
+    border-color: #000;
+}
+
+.plan-option.selected .plan-name,
+.plan-option.selected .plan-price,
+.plan-option.selected .plan-features,
+.plan-option.selected .plan-features li {
+    color: white;
+}
+
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem 2rem;
+                flex-direction: column;
+            }
+
+            nav {
+                margin-top: 1.5rem;
+            }
+
+            .purchase-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .purchase-form {
+                padding: 2rem;
+            }
+        }
+}
+@media (min-width: 601px) and (max-width: 992px) {
+       body{
+    font-family: 'deltha';
+    background-color: #e3e2e2;
+    overflow-x: hidden;
+}
+ #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #e3e2e2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        #loading-screen h1{
+            font-size: 60px;
+        }
+
+        .loading-spinner {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #000000;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+header{
+    align-items: center;
+
+    z-index:999 ;
+
+}
+header h1{
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 300;
+    position: absolute;
+    left: 3%;
+    top: 3%;
+    
+}
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 3%;
+        top: 3%;
+
+    }
+
+    nav {
+        position: absolute;
+        top: 5rem;
+        right: 0;
+        background-color: #e3e2e2;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        padding: 1rem 2rem;
+        display: none;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        padding: 1rem 0;
+        font-size: 1.1rem;
+        width: 100%;
+    }
+
+.content {
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 999;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+}
+
+.tagbox{
+    position: relative;
+    width: 18rem;
+    height: 2.5rem;
+    border-radius: 50px;
+    background: linear-gradient(to right,#656565, #888888,#b8b8b8, #525252,#757575,#656565);
+    background-size: 200%;
+    animation: animationGradient 2.5s linear;
+    box-shadow: 0 0 15px rgb(255, 255, 255,0.3);
+    margin: 1rem auto;
+
+}
+@keyframes animationGradient{
+    to{
+        background-position: 200%;
+    }
+}
+.tagbox .tag{
+    position: absolute;
+    inset: 3px 3px 3px 3px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.tagbox .tag:hover{
+    color: #000000;
+}
+.content h1{
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin: 2rem 0;
+    line-height: 1.2;
+    text-shadow: 0 0 10px rgba(128, 128, 128, 0.418);
+
+}
+.description{
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    max-width: 35rem;
+    color: grey;
+}
+.buttons{
+    gap: 1.5rem;
+    position: relative;
+    bottom: 35px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.getstartedbtn{
+    text-decoration: none;
+    border: 2px solid #2a2a2a;
+    color: #000000;
+    padding: 0.7rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    transition:  background-color 0.2s ease;
+}
+.getstartedbtn:hover{
+    background-color: #000000;
+    color: white;
+}
+.signinmainbtn{
+    text-decoration: none;
+    background-color: rgb(137, 137, 137);
+    color: black;
+    border: 2px solid #2a2a2a;
+    padding: 0.7rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    transition:  background-color 0.2s ease;
+}
+.signinmainbtn:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+.creditcard{
+    position: absolute;
+    top: 25%;
+    left: 0%;
+    transform: scale(1);
+    cursor: pointer;
+    z-index: -1;
+}
+ .purchase-container {
+            max-width: 800px;
+            margin: 0rem auto;
+            padding: 0 0rem;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .purchase-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .purchase-header h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+
+        .purchase-header p {
+            font-size: 1.2rem;
+            color: #000000;
+        }
+
+        .purchase-form {
+            background: white;
+            border-radius: 10px;
+            padding: 3rem;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .form-control {
+            width: 94%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-family: 'deltha';
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #000;
+            box-shadow: 0 0 0 3px rgba(0,0,0,0.05);
+        }
+
+        select.form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1em;
+        }
+
+        .plan-options {
+            display: none;
+            margin-top: 1.5rem;
+            padding: 1.5rem;
+            background: rgba(0,0,0,0.03);
+            border-radius: 6px;
+        }
+
+        .plan-options.active {
+            display: block;
+        }
+
+        .plan-option {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .plan-option:hover {
+            border-color: #000;
+        }
+
+        .plan-option.selected {
+            border-color: #000;
+            background: rgba(0,0,0,0.03);
+        }
+
+        .plan-name {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .plan-price {
+            color: #555;
+        }
+
+        .plan-features {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        .plan-features li {
+            margin-bottom: 0.3rem;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.2rem;
+            background: #000;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-family: 'deltha';
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 2rem;
+        }
+
+        .submit-btn:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+
+        .confirmation-message {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+        }
+
+        .confirmation-message h2 {
+            font-size: 2rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+
+        .confirmation-message p {
+            color: #555;
+            margin-bottom: 2rem;
+        }
+
+.plan-option {
+    transition: all 0.3s ease;
+}
+
+.plan-option:hover {
+    background-color: #ffffff;
+    color: white;
+    border-color: #000;
+}
+
+.plan-option:hover .plan-name,
+.plan-option:hover .plan-price,
+.plan-option:hover .plan-features {
+    color: rgb(0, 0, 0);
+}
+
+.plan-option.selected {
+    background-color: #000;
+    color: white;
+    border-color: #000;
+}
+
+.plan-option.selected .plan-name,
+.plan-option.selected .plan-price,
+.plan-option.selected .plan-features,
+.plan-option.selected .plan-features li {
+    color: white;
+}
+
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem 2rem;
+                flex-direction: column;
+            }
+
+            nav {
+                margin-top: 1.5rem;
+            }
+
+            .purchase-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .purchase-form {
+                padding: 2rem;
+            }
+        }
+}

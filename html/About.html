@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automa | About</title>
+      <link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css">
+    <link rel="stylesheet" href="/css/About.css">
+
+    <style>
+        .creator-section {
+            text-align: center;
+            margin: 50px 0;
+            padding: 40px;
+            background: #f8f8f8;
+            border-radius: 10px;
+        }
+        
+        .creator-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 20px auto;
+            border: 3px solid #000;
+            display: block;
+        }
+        
+        
+        .project-details {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .project-details h2 {
+            font-size: 1.8rem;
+            margin: 30px 0 15px;
+            color: #222;
+        }
+        
+        .project-details p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .tech-item {
+            background: #000;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 50px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="logo">AUTOMA</h1>
+         <div class="hamburger" id="hamburger">&#9776;</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="SEHome.html">Alternative home</a>
+            <a href="purchase.html">Purchase</a>
+            <a href="contact.html">Reach US</a>
+        </nav>            
+    </header>
+   <div class="all">
+     <div class="content">
+        <div class="tagbox">
+            <div class="tag">about us</div>
+        </div>
+  
+     
+        <h1>The Automa Story<br>Created by Bayrem Hanini</h1>
+        <p class="description">A solo developer's journey to automate daily tasks</p>
+    </div>
+    
+    <div class="creator-section">
+        <h2>Bayrem Hanini</h2>
+        <h3>Founder & Sole Developer</h3>
+    </div>
+    
+    <div class="project-details">
+        <h2>The Automa Project</h2>
+        <p>Automa is the brainchild of Bayrem Hanini, developed entirely as a solo project throughout 2025. What began as a simple idea to automate repetitive tasks like "bulk mail sending" as a starter then it became a bigger project to automate other tasks than mails.</p>
+        
+        <h2>Development Journey</h2>
+        <p>Built from the ground up, every aspect of Automa - from the initial design to the final implementation - was personally crafted by Bayrem hanini. The project represents over 5 months of dedicated development, testing, and refinement.</p>
+        
+        <h2>Technical Implementation</h2>
+        <p>Automa was built using a modern web technology stack:</p>
+        <div class="tech-stack">
+            <span class="tech-item">HTML5</span>
+            <span class="tech-item">CSS</span>
+            <span class="tech-item">JavaScript</span>
+            <span class="tech-item">Node.js</span>
+            <span class="tech-item">Express</span>
+            <span class="tech-item">MongoDB</span>
+            <span class="tech-item">spline</span>
+            <span class="tech-item">Python</span>
+        </div>
+        
+        <h2>Project Philosophy</h2>
+        <p>"Automa was born from the frustration with repetitive digital tasks. I wanted to create tools that would handle the boring work so people could focus on what matters. Every line of code reflects my belief that technology should serve people, not the other way around."</p>
+        
+        <div class="copyright">
+            <p>© 2025 Automa | A Bayrem Hanini Production</p>
+            <p>All rights reserved | Fully designed and developed by Bayrem Hanini</p>
+        </div>
+    </div>
+   </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const signatures = document.querySelectorAll('.signature');
+            signatures.forEach(sig => {
+                sig.style.opacity = '0';
+                setTimeout(() => {
+                    sig.style.transition = 'opacity 1.5s ease-in-out';
+                    sig.style.opacity = '1';
+                }, 500);
+            });
+        });
+    </script>
+    
+</body>
+</html>

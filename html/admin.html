@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <title>Automa Admin</title>
+  <link rel="stylesheet" href="/css/About.css" />
+  <style>
+    .admin-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid #333;
+    }
+    .status-pending {
+      color: #684506;
+    }
+    .status-approved {
+      color: #044704;
+    }
+    .status-rejected {
+      color: #4d0505;
+    }
+    button {
+      margin-right: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    if (!localStorage.getItem('automaAdminAuth')) {
+      window.location.href = "login.html";
+    }
+    function logout() {
+      localStorage.removeItem('automaAdminAuth');
+      window.location.href = "login.html";
+    }
+  </script>
+  <header>
+    <h1 class="logo">AUTOMA ADMIN</h1>
+    <nav>
+      <a href="#" id="refreshBtn">Refresh</a>
+      <a href="javascript:logout()">Logout</a>
+    </nav>
+  </header>
+
+  <div class="admin-container">
+    <h1>Service Requests</h1>
+    <table id="requestsTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Service</th>
+          <th>Plan</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <h1>Contact Messages</h1>
+<table id="contactTable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Subject</th>
+      <th>Message</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+  </div>
+ 
+
+
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import {
+      getFirestore,
+      collection,
+      getDocs,
+      doc,
+      updateDoc,
+      query,
+      orderBy
+    } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDRWVCZvvhwWQ6-GFIg2itOU2ZxrEEm1Bc",
+      authDomain: "automa-e7a55.firebaseapp.com",
+      projectId: "automa-e7a55",
+      storageBucket: "automa-e7a55.appspot.com",
+      messagingSenderId: "881549519390",
+      appId: "1:881549519390:web:1c6ffa6a98c2c80bef5c0f",
+      measurementId: "G-Z0F304T0RS"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    async function loadRequests() {
+      const requestsTableBody = document.querySelector('#requestsTable tbody');
+      requestsTableBody.innerHTML = ''; 
+
+      try {
+        const q = query(collection(db, "requests"), orderBy("submittedAt", "desc"));
+        const querySnapshot = await getDocs(q);
+
+        querySnapshot.forEach((docSnap) => {
+          const req = docSnap.data();
+          const id = docSnap.id;
+          const service = req.serviceType?.split('(')[0].trim() || '';
+          const plan = req.message?.split(':')[1]?.trim() || '-';
+          const status = req.status || "Pending";
+
+         const phone = req.phone || '-'; 
+
+            const row = document.createElement('tr');
+            row.innerHTML = `
+              <td>${req.name || ''}</td>
+              <td>${req.email || ''}</td>
+              <td>${phone}</td>
+              <td>${service}</td>
+              <td>${plan}</td>
+              <td class="status-${status.toLowerCase()}">${status}</td>
+              <td>
+                <button onclick="updateStatus('${id}', 'Approved')">✓</button>
+                <button onclick="updateStatus('${id}', 'Rejected')">✗</button>
+              </td>
+            `;
+          requestsTableBody.appendChild(row);
+        });
+      } catch (error) {
+        console.error("Error loading requests:", error);
+      }
+    }
+
+    window.updateStatus = async function(id, status) {
+      try {
+        const requestDoc = doc(db, "requests", id);
+        await updateDoc(requestDoc, { status });
+        loadRequests();
+      } catch (error) {
+        console.error("Error updating status:", error);
+        alert("Failed to update status.");
+      }
+    }
+
+    document.getElementById('refreshBtn').addEventListener('click', () => {
+  loadRequests();
+  loadContactMessages();
+});
+
+    async function loadContactMessages() {
+  const contactTableBody = document.querySelector('#contactTable tbody');
+  contactTableBody.innerHTML = '';
+
+  try {
+    const q = query(collection(db, "contact_messages"), orderBy("createdAt", "desc"));
+    const querySnapshot = await getDocs(q);
+
+    querySnapshot.forEach((docSnap) => {
+      const msg = docSnap.data();
+
+      const date = msg.createdAt?.toDate().toLocaleString() || '-';
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${msg.name || ''}</td>
+        <td>${msg.email || ''}</td>
+        <td>${msg.subject || ''}</td>
+        <td>${msg.message || ''}</td>
+        <td>${date}</td>
+      `;
+      contactTableBody.appendChild(row);
+    });
+  } catch (error) {
+    console.error("Error loading contact messages:", error);
+  }
+}
+loadContactMessages();
+
+    loadRequests();
+  </script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automa|BMS</title>
+    <link rel="stylesheet" href="/css/bms.css">
+</head>
+<body>
+     <div id="loading-screen">
+        <h1>AUTOMA | BMS</h1>
+        <div class="loading-spinner"></div>
+    </div>
+    <main>
+        <header>
+        <h1 class="logo">AUTOMA | BMS</h1>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+
+        <nav>
+            <a href="Home.html">Home</a>
+            <a href="SEHome.html">Alternative home</a>
+            <a href="purchase.html">Purchase</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Reach US</a>
+        </nav>            
+    </header>
+    <br>
+    <div class="content">
+                <h1>INTRODUCING<br> BULK MAIL SENDER</h1>
+                <P class="description">Access our automation services throught our website.</P>
+                <p class="description">Join us now to get your boring task made for you in no time.</p>
+                <div class="buttons">
+                    <a onclick="scrollToService('plans')" class="getstartedbtn">See plans</a>
+                    <a href="Service.html" class="signinmainbtn">Back to services</a>  
+                </div>
+    </div>
+    <br><br><br>
+       <section id="plans">
+        <div class="plans-header">
+            <h2>Our Packages</h2>
+            <p>Choose the perfect solution for your email automation needs</p>
+        </div>
+        
+        <div class="plans-container">
+            <div class="plan-card">
+                <h3>Basic Application</h3>
+                <div class="plan-features">
+                    <p>Automated mail sender capable of sending up to 500 emails in a single click.</p>
+                    <ul>
+                        <li>Load client files (names/emails)</li>
+                        <li>+500 Mails per day</li>
+                        <li>Simple interface</li>
+                        <li>No landing page included</li>
+                    </ul>
+                </div>
+                <button onclick="window.location.href='purchase.html';" class="plan-select">Select Basic</button>
+            </div>
+            <div class="plan-card featured">
+                <div class="featured-badge">Popular</div>
+                <h3>BMS + Basic Landing</h3>
+                <div class="plan-features">
+                    <p>Includes the Bulk Email Sender App plus a pre-made landing page.</p>
+                    <ul>
+                        <li>Send up to 500 emails</li>
+                        <li>Basic landing page</li>
+                        <li>Non-customizable design</li>
+                    </ul>
+                </div>
+                <button onclick="window.location.href='purchase.html';" class="plan-select">Select Combo</button>
+            </div>
+            
+            <div class="plan-card">
+                <h3>BMS + Custom Landing</h3>
+                <div class="plan-features">
+                    <p>Includes the Bulk Email Sender App plus a customizable landing page.</p>
+                    <ul>
+                        <li>Send up to 500 emails</li>
+                        <li>Custom colors/text/images</li>
+                        <li>Brand matching</li>
+                    </ul>
+                </div>
+                <button onclick="window.location.href='purchase.html';" class="plan-select">Select Custom</button>
+            </div>
+            
+            <div class="coming-soon-grid">
+                <div class="plan-card coming-soon">
+                    <h3>BMS PRO</h3>
+                    <div class="plan-features">
+                        <p>Advanced app that scrapes cold leads and converts them.</p>
+                        <ul>
+                            <li>Cold lead scraping</li>
+                            <li>Warm lead conversion</li>
+                            <li>Email outreach ready</li>
+                        </ul>
+                    </div>
+                    <div class="soon-badge">Coming Soon</div>
+                </div>
+                
+                <div class="plan-card coming-soon">
+                    <h3>BMS PRO + Premium</h3>
+                    <div class="plan-features">
+                        <p>The ultimate solution for businesses.</p>
+                        <ul>
+                            <li>Lead scraping/conversion</li>
+                            <li>Stunning animated landing page</li>
+                            <li>Complete package</li>
+                        </ul>
+                    </div>
+                    <div class="soon-badge">Coming Soon</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.37/build/spline-viewer.js"></script>
+<spline-viewer class="parts" url="https://prod.spline.design/YcfMcjPgY5kRifvl/scene.splinecode"></spline-viewer>
+    
+    <script>
+         function scrollToService(serviceId) {
+            document.getElementById(serviceId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    </script>
+    <script src="/js/loading.js"></script>
+</body>
+</html>
